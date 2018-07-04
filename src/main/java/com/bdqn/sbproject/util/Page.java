@@ -4,7 +4,7 @@ public class Page {
   private Integer pageIndex;
   private Integer pageSize;
   private Integer rowCount;
-  private Integer fromTo;
+  private Integer fromasdfTo;
 
   public Integer getPageIndex() {
     return pageIndex;
@@ -31,10 +31,10 @@ public class Page {
   }
 
   public Integer getFromTo() {
-    return fromTo;
+    return fromasdfTo;
   }
 
   public void setFromTo(Integer fromTo) {
-    this.fromTo = fromTo;
+    this.fromasdfTo = fromTo;
   }
 }
