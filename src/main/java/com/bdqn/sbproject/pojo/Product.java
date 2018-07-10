@@ -8,76 +8,33 @@ import java.util.List;
 @Document(collection = "product")
 public class Product {
     @Id
-    private String proID;
-    private String proWeight;
-    private String electrodrill;
-    private String proPower;
-    private String proRate;
-    private String maxiDrill;
-    private String maxCollet;
-    private List<Comment> comment;
+    //冲击钻
+    private String proID;//商品编号
+    private String proWeight;//商品毛重
+    private String electrodrill;//电钻类
+    private String proPower;//额定功率
+    private String proRate;//速率
+    private String maxiDrill;//最大钻孔直径
+    private String maxCollet;//最大夹头直径
 
-    public String getProID() {
-        return proID;
-    }
+    //电钻
+    private String proModel;//产品型号
+    private String proVoltage;//电池电压
+    private String proScrew;//螺钉
 
-    public void setProID(String proID) {
-        this.proID = proID;
-    }
 
-    public String getProWeight() {
-        return proWeight;
-    }
+    //液压机
+    private String proSpecs;//规格
+    private String proPrice;//产品价格
+    private String proPoint;//产品特点
+    private String operationPanel;//操作面板
 
-    public void setProWeight(String proWeight) {
-        this.proWeight = proWeight;
-    }
 
-    public String getElectrodrill() {
-        return electrodrill;
-    }
 
-    public void setElectrodrill(String electrodrill) {
-        this.electrodrill = electrodrill;
-    }
+    private List<Comment> comment;//文本
 
-    public String getProPower() {
-        return proPower;
-    }
 
-    public void setProPower(String proPower) {
-        this.proPower = proPower;
-    }
 
-    public String getProRate() {
-        return proRate;
-    }
 
-    public void setProRate(String proRate) {
-        this.proRate = proRate;
-    }
 
-    public String getMaxiDrill() {
-        return maxiDrill;
-    }
-
-    public void setMaxiDrill(String maxiDrill) {
-        this.maxiDrill = maxiDrill;
-    }
-
-    public String getMaxCollet() {
-        return maxCollet;
-    }
-
-    public void setMaxCollet(String maxCollet) {
-        this.maxCollet = maxCollet;
-    }
-
-    public List<Comment> getComment() {
-        return comment;
-    }
-
-    public void setComment(List<Comment> comment) {
-        this.comment = comment;
-    }
 }
