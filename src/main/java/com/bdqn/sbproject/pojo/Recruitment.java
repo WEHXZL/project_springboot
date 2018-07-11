@@ -1,5 +1,6 @@
 package com.bdqn.sbproject.pojo;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -7,6 +8,7 @@ import java.util.Date;
 
 @Document(collection = "recruitment")
 public class Recruitment implements Serializable {
+    @Id
     private Integer recruitmentID;//人才招聘id
     private String recruitJob;//招聘职位
     private Date recruitTime;//发布时间
