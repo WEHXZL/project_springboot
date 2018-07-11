@@ -3,10 +3,11 @@ package com.bdqn.sbproject.pojo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Document(collection = "product")
-public class Product {
+public class Product implements Serializable {
     @Id
     //冲击钻
     private String proID;//商品编号
@@ -29,9 +30,7 @@ public class Product {
     private String proPoint;//产品特点
     private String operationPanel;//操作面板
 
-
-
-    private List<Comment> comment;//文本
+    private String proImg;//图片
 
 
 
