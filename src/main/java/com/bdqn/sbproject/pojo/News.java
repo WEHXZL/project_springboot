@@ -3,6 +3,8 @@ package com.bdqn.sbproject.pojo;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.Date;
+
 @Document(collection = "news")
 public class News implements Serializable {
 
@@ -10,14 +12,13 @@ public class News implements Serializable {
     private String newsTittle;//新闻中心标题
     private String newsColumn;//栏目
     private String newsImg;//新闻图片;
-    private String newsTime;//新闻时间
+    private Date newsTime;//新闻时间
     private String newsText;//新闻栏目内容
 
     public News() {
     }
 
-    public News(Integer newsID, String newsTittle, String newsColumn, String newsImg, String newsTime, String newsText) {
-
+    public News(Integer newsID, String newsTittle, String newsColumn, String newsImg, Date newsTime, String newsText) {
         this.newsID = newsID;
         this.newsTittle = newsTittle;
         this.newsColumn = newsColumn;
@@ -58,11 +59,11 @@ public class News implements Serializable {
         this.newsImg = newsImg;
     }
 
-    public String getNewsTime() {
+    public Date getNewsTime() {
         return newsTime;
     }
 
-    public void setNewsTime(String newsTime) {
+    public void setNewsTime(Date newsTime) {
         this.newsTime = newsTime;
     }
 
