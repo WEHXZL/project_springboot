@@ -9,6 +9,7 @@ import java.util.List;
 @Document(collection = "product")
 public class Product implements Serializable {
     @Id
+    private String proTittle;//标题
     //冲击钻
     private String proID;//商品编号
     private String proWeight;//商品毛重
