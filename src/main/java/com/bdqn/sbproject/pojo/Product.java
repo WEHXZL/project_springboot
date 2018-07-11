@@ -11,10 +11,10 @@ public class Product implements Serializable {
     @Id
     private Integer productID;//id
     private String proTittle;//标题
+    private String proType;//商品类型
     //冲击钻
     private String proID;//商品编号
     private String proWeight;//商品毛重
-    private String electrodrill;//电钻类
     private String proPower;//额定功率
     private String proRate;//速率
     private String maxiDrill;//最大钻孔直径
@@ -38,12 +38,12 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Product(Integer productID, String proTittle, String proID, String proWeight, String electrodrill, String proPower, String proRate, String maxiDrill, String maxCollet, String proModel, String proVoltage, String proScrew, String proSpecs, String proPrice, String proPoint, String operationPanel, String proImg) {
+    public Product(Integer productID, String proTittle, String proType, String proID, String proWeight, String proPower, String proRate, String maxiDrill, String maxCollet, String proModel, String proVoltage, String proScrew, String proSpecs, String proPrice, String proPoint, String operationPanel, String proImg) {
         this.productID = productID;
         this.proTittle = proTittle;
+        this.proType = proType;
         this.proID = proID;
         this.proWeight = proWeight;
-        this.electrodrill = electrodrill;
         this.proPower = proPower;
         this.proRate = proRate;
         this.maxiDrill = maxiDrill;
@@ -90,12 +90,12 @@ public class Product implements Serializable {
         this.proWeight = proWeight;
     }
 
-    public String getElectrodrill() {
-        return electrodrill;
+    public String getProType() {
+        return proType;
     }
 
-    public void setElectrodrill(String electrodrill) {
-        this.electrodrill = electrodrill;
+    public void setProType(String proType) {
+        this.proType = proType;
     }
 
     public String getProPower() {

@@ -1,5 +1,6 @@
 package com.bdqn.sbproject.pojo;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -7,21 +8,21 @@ import java.util.Date;
 
 @Document(collection = "news")
 public class News implements Serializable {
-
+    @Id
     private Integer newsID;//新闻id
-    private String newsTittle;//新闻中心标题
-    private String newsColumn;//栏目
+    private String newsType;//新闻种类
+    private String newsTitle;//新闻标题
     private String newsImg;//新闻图片;
     private Date newsTime;//新闻时间
-    private String newsText;//新闻栏目内容
+    private String newsText;//新闻内容
 
     public News() {
     }
 
-    public News(Integer newsID, String newsTittle, String newsColumn, String newsImg, Date newsTime, String newsText) {
+    public News(Integer newsID, String newsType, String newsTitle, String newsImg, Date newsTime, String newsText) {
         this.newsID = newsID;
-        this.newsTittle = newsTittle;
-        this.newsColumn = newsColumn;
+        this.newsType = newsType;
+        this.newsTitle = newsTitle;
         this.newsImg = newsImg;
         this.newsTime = newsTime;
         this.newsText = newsText;
@@ -35,20 +36,20 @@ public class News implements Serializable {
         this.newsID = newsID;
     }
 
-    public String getNewsTittle() {
-        return newsTittle;
+    public String getNewsType() {
+        return newsType;
     }
 
-    public void setNewsTittle(String newsTittle) {
-        this.newsTittle = newsTittle;
+    public void setNewsType(String newsType) {
+        this.newsType = newsType;
     }
 
-    public String getNewsColumn() {
-        return newsColumn;
+    public String getNewsTitle() {
+        return newsTitle;
     }
 
-    public void setNewsColumn(String newsColumn) {
-        this.newsColumn = newsColumn;
+    public void setNewsTitle(String newsTitle) {
+        this.newsTitle = newsTitle;
     }
 
     public String getNewsImg() {

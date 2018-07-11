@@ -1,14 +1,16 @@
 package com.bdqn.sbproject.pojo;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 
 @Document(collection = "about")
 public class About implements Serializable {
-            private Integer aboutID;//id
-            private String aboutTitle;//关于我们标题
-            private String aboutContext;//内容
+    @Id
+    private Integer aboutID;//id
+    private String aboutTitle;//关于我们标题
+    private String aboutContext;//内容
 
     public About() {
     }

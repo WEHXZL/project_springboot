@@ -8,7 +8,6 @@ import java.util.Date;
 @Document(collection = "recruitment")
 public class Recruitment implements Serializable {
     private Integer recruitmentID;//人才招聘id
-    private String recruitTittle;//加入我们
     private String recruitJob;//招聘职位
     private Date recruitTime;//发布时间
     private String recruitQuali;//任职要求
@@ -19,9 +18,8 @@ public class Recruitment implements Serializable {
     public Recruitment() {
     }
 
-    public Recruitment(Integer recruitmentID, String recruitTittle, String recruitJob, Date recruitTime, String recruitQuali, String recruitContact, String recruitPhone, String recruitEmail) {
+    public Recruitment(Integer recruitmentID, String recruitJob, Date recruitTime, String recruitQuali, String recruitContact, String recruitPhone, String recruitEmail) {
         this.recruitmentID = recruitmentID;
-        this.recruitTittle = recruitTittle;
         this.recruitJob = recruitJob;
         this.recruitTime = recruitTime;
         this.recruitQuali = recruitQuali;
@@ -36,14 +34,6 @@ public class Recruitment implements Serializable {
 
     public void setRecruitmentID(Integer recruitmentID) {
         this.recruitmentID = recruitmentID;
-    }
-
-    public String getRecruitTittle() {
-        return recruitTittle;
-    }
-
-    public void setRecruitTittle(String recruitTittle) {
-        this.recruitTittle = recruitTittle;
     }
 
     public String getRecruitJob() {
